@@ -59,11 +59,12 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBXqEznlWZmcsSDef_raIHigJcEi0rrIc0',
-    appId: '1:824435466912:ios:5931c4200966da62eb9fc5',
+    appId: '1:824435466912:ios:45e06cdcb6157c33eb9fc5',
     messagingSenderId: '824435466912',
     projectId: 'skill-manage1',
     storageBucket: 'skill-manage1.firebasestorage.app',
-    iosBundleId: 'com.example.skillManager',
+    iosClientId: '824435466912-e80kh39llmhn0lpkhk7m6o0sr650e0on.apps.googleusercontent.com',
+    iosBundleId: 'com.jrhbusinesss.skillmanager',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
