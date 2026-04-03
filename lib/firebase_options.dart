@@ -64,7 +64,7 @@ class DefaultFirebaseOptions {
     projectId: 'skill-manage1',
     storageBucket: 'skill-manage1.firebasestorage.app',
     iosClientId: '824435466912-e80kh39llmhn0lpkhk7m6o0sr650e0on.apps.googleusercontent.com',
-    iosBundleId: 'com.jrhbusinessss.skillmanager',
+    iosBundleId: 'com.jrhbusinesss.skillmanager',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
