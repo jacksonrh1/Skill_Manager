@@ -142,19 +142,28 @@ class ProfilePage extends StatelessWidget {
 
   Future<void> _showNameEditor(BuildContext context) async {
     final controller = TextEditingController(text: store.profile.name);
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final surfaceColor = isDark ? const Color(0xFF1B2433) : Colors.white;
+    final primaryText = isDark ? const Color(0xFFF5F7FB) : const Color(0xFF1F2635);
+    final secondaryText = isDark ? const Color(0xFF9FAACA) : const Color(0xFF8792A8);
 
     await showDialog<void>(
       context: context,
       builder: (dialogContext) {
         return AlertDialog(
-          backgroundColor: Colors.white,
-          title: const Text('Edit Name'),
+          backgroundColor: surfaceColor,
+          title: Text(
+            'Edit Name',
+            style: TextStyle(color: primaryText),
+          ),
           content: TextField(
             controller: controller,
             autofocus: true,
+            style: TextStyle(color: primaryText),
             textCapitalization: TextCapitalization.words,
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               hintText: 'Your name',
+              hintStyle: TextStyle(color: secondaryText),
             ),
           ),
           actions: [
@@ -176,9 +185,14 @@ class ProfilePage extends StatelessWidget {
   }
 
   Future<void> _showAvatarPicker(BuildContext context) async {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final surfaceColor = isDark ? const Color(0xFF1B2433) : Colors.white;
+    final primaryText = isDark ? const Color(0xFFF5F7FB) : const Color(0xFF263041);
+    final secondaryText = isDark ? const Color(0xFF9FAACA) : const Color(0xFF7C879B);
+
     await showModalBottomSheet<void>(
       context: context,
-      backgroundColor: Colors.white,
+      backgroundColor: surfaceColor,
       showDragHandle: true,
       builder: (sheetContext) {
         return Padding(
@@ -187,10 +201,10 @@ class ProfilePage extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 'Profile Picture',
                 style: TextStyle(
-                  color: Color(0xFF263041),
+                  color: primaryText,
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
                 ),
@@ -202,8 +216,14 @@ class ProfilePage extends StatelessWidget {
                   Icons.upload_rounded,
                   color: Color(0xFF5D9EF8),
                 ),
-                title: const Text('Upload photo'),
-                subtitle: const Text('Automatically resized to a square avatar'),
+                title: Text(
+                  'Upload photo',
+                  style: TextStyle(color: primaryText),
+                ),
+                subtitle: Text(
+                  'Automatically resized to a square avatar',
+                  style: TextStyle(color: secondaryText),
+                ),
                 onTap: () async {
                   final imagePath =
                       await ProfileImageService.pickAndSaveResizedImage();
@@ -223,8 +243,14 @@ class ProfilePage extends StatelessWidget {
                     Icons.delete_outline_rounded,
                     color: Color(0xFFE35D6A),
                   ),
-                  title: const Text('Remove photo'),
-                  subtitle: const Text('Go back to a generated profile avatar'),
+                  title: Text(
+                    'Remove photo',
+                    style: TextStyle(color: primaryText),
+                  ),
+                  subtitle: Text(
+                    'Go back to a generated profile avatar',
+                    style: TextStyle(color: secondaryText),
+                  ),
                   onTap: () async {
                     await store.clearAvatarImagePath();
                     if (sheetContext.mounted) {
@@ -233,10 +259,10 @@ class ProfilePage extends StatelessWidget {
                   },
                 ),
               const SizedBox(height: 8),
-              const Text(
+              Text(
                 'Or choose a profile style',
                 style: TextStyle(
-                  color: Color(0xFF7C879B),
+                  color: secondaryText,
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
                 ),
