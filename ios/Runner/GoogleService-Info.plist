@@ -1,11 +1,12 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>824435466912-e80kh39llmhn0lpkhk7m6o0sr650e0on.apps.googleusercontent.com</string>
+	<string>824435466912-hag322cdv2s540p2rc70dktuh9635ord.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.824435466912-e80kh39llmhn0lpkhk7m6o0sr650e0on</string>
+	<string>com.googleusercontent.apps.824435466912-hag322cdv2s540p2rc70dktuh9635ord</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBXqEznlWZmcsSDef_raIHigJcEi0rrIc0</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +14,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.jrhbusinesss.skillmanager</string>
+	<string>com.jacksonrh.skillmanager</string>
 	<key>PROJECT_ID</key>
 	<string>skill-manage1</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +30,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:824435466912:ios:45e06cdcb6157c33eb9fc5</string>
+	<string>1:824435466912:ios:09b728d05cfe96e0eb9fc5</string>
 </dict>
 </plist>
